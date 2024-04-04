@@ -5,6 +5,6 @@ variable "tools" {
     }
   }
 }
-variable "zone_id" {
-  default = "Z0973896Y2YOE63MZMJ"
-}
+  variable "zone_id" {
+    default = "Z0973896Y2YOE63MZMJ"
+  }
