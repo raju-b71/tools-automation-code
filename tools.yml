@@ -2,4 +2,4 @@
   hosts: all
   become: yes
   tasks:
-    - "{ -tool_name }"
+    - "{{ tool_name }}"
