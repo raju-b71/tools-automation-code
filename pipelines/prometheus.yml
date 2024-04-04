@@ -17,4 +17,4 @@ pipelines:
           jobs:
             ansible:
               tasks:
-                - exec: { command: ansible-playbook, arguments: [ "-i", "prometheus.rajdevops.online,", "tools.yml", "-e", "tools_name=prometheus", "-e", "ansible_user=ec2-user", "-e", "ansible_pass=DevOps321" ], run_if: passed }
+                - exec: { command: ansible-playbook, arguments: [ "-i", "prometheus.rajdevops.online,", "tools.yml", "-e", "tool_name=prometheus", "-e", "ansible_user=ec2-user", "-e", "ansible_pass=DevOps321" ], run_if: passed }
