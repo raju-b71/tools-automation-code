@@ -37,3 +37,13 @@ resource "aws_iam_role" "role" {
     tag-key = "${var.tool_name}-role"
   }
 }
+
+resource "aws_iam_instance_profile" "instance_profile" {
+  name = "${var.tool_name}"
+  role = aws_iam_role.role.name
+}
+
+
+
+
+
