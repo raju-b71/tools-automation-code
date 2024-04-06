@@ -19,7 +19,7 @@
 
 - name: Start Prometheus Service
   ansible.builtin.systemd_service:
-    name: prometheus
+    name: prometheus.service
     state: restarted
     enabled: yes
     daemon-reload: yes
