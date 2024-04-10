@@ -10,7 +10,7 @@
 - name: Install Grafana
   ansible.builtin.dnf:
     name: grafana
-    state: install
+    state: installed
 
 
 - name: Start Grafana
