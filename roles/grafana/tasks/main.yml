@@ -2,3 +2,7 @@
   ansible.builtin.template:
     src: grafana.repo
     dest: /etc/yum.repos.d/grafana.repo
+
+
+- name: Install Grafana
+  ansible.builtin.shell: sudo dnf install grafana
