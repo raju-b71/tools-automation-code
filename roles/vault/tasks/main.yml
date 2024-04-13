@@ -1,4 +1,4 @@
-- name:Set Name in Prompt
+- name: Set Name in Prompt
 - ansible.builtin.shell: set-prompt vault
 
 - name: Install YUM Repo file
