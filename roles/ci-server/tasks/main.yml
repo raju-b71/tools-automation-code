@@ -22,9 +22,10 @@
   ansible.builtin.shell: "echo{{ lookup('ansible.builtin.env', 'vault_token') }}"
 
 
-#- name: Install Runner
-#  ansible.builtin.shell: ./config.sh --url https://github.com/raju-b71 --token
-#gjn,
+- name: Install Runner
+  ansible.builtin.shell: ./config.sh --url https://github.com/raju-b71 --token {{secrets.GITHUB_RUNNER_TOKEN}}
+  args:
+    chdir: /home/ec2-user/github-runner
 
 
 
