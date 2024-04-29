@@ -1,0 +1,22 @@
+- name: Set Prompt
+  ansible.builtin.shell: set-prompt ci-runner
+
+- name: Create Runner Directory
+  ansible.builtin.file:
+    path: /home/ec2-user/github-runner
+    state: directory
+  become_user: ec2-user
+
+- name: Download Runner
+  ansible.builtin.unarchive:
+    src: https://github.com/actions/runner/releases/download/v2.316.0/actions-runner-linux-x64-2.316.0.tar.gz
+    dest: /home/ec2-user/github-runner
+    remote_src: yes
+  become_user: ec2-user
+
+
+- name: Install Dependencies
+  ansible.builtin.shell: /home/ec2-user/github-runner/bin/installdependencies.sh
+
+#- name: Install Runner
+#  ansible.builtin.shell: ./config.sh --url https://github.com/raju-b71 --token

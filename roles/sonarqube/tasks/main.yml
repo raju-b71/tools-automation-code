@@ -5,7 +5,6 @@
   ansible.builtin.user:
     name: sonar
 
-
 - name: Install Java
   ansible.builtin.dnf:
     name: java-17-openjdk
