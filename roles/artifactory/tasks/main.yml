@@ -10,7 +10,7 @@
 #
 - name: Install Jfrog
   ansible.builtin.dnf:
-    name: jfrog
+    name: jfrog-artifactory-oss
     state: installed
     disable_gpg_check: true
 
