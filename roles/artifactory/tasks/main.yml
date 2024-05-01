@@ -3,8 +3,8 @@
 
 - name: Copy repo file
   ansible.builtin.template:
-  src: jfrog.repo
-  dest: /etc/yum.repos.d/jfrog-artifactory-rpms.repo
+    src: jfrog.repo
+    dest: /etc/yum.repos.d/jfrog-artifactory-rpms.repo
 
 
 #
