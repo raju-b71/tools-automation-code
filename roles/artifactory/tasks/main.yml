@@ -1,7 +1,7 @@
 - name: Set prompt
   ansible.builtin.shell: set-prompt artifactory
 
-- name: Copy Repo File
+- name: Copy repo File
   ansible.builtin.template:
   src: jfrog.repo
   dest: /etc/yum.repos.d/jfrog-artifactory-rpms.repo
