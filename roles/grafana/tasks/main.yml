@@ -25,6 +25,13 @@
     title: "ProjectDashboards"
     state: present
 
+- name: Include task list in play
+  ansible.builtin.include_tasks:
+    file: import-dashboard.yml
+  loop:
+    - node-exporter
+
+
 - name: Start Grafana
   ansible.builtin.systemd_service:
     name: grafana-server
