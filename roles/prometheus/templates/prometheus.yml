@@ -21,6 +21,6 @@ scrape_configs:
      - region: us-east-1
        port: 80
        filters:
-       - name: tag:monitor
+       - name: tag:Name
          values: [ "frontend-dev", "frontend-prod" ]
 
