@@ -20,8 +20,8 @@
 - name: Create a folder
   community.grafana.grafana_folder:
     url: http://localhost:3000
-    grafana_user: "admin"
-    grafana_password: "admin"
+    grafana_user: "{{secrets.grafana_user}}"
+    grafana_password: "{{secrets.grafana_password}}"
     title: "ProjectDashboards"
     state: present
 
@@ -30,6 +30,7 @@
     file: import-dashboard.yml
   loop:
     - node-exporter
+    - caddy
 
 
 - name: Start Grafana
